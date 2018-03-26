@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>testimageio.html</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!--<meta http-equiv="refresh" content="1">-->
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<script>
+	window.onload = Init;
+	var teacherNum = 1;
+	function Init() {
+		window.setInterval(function(){
+		console.log(1);
+		document.getElementById("img").setAttribute("src",
+				"servlet/TestImageIO?count=" + teacherNum);
+				teacherNum++;
+		}, 250);
+
+	}
+	
+</script>
+</head>
+
+<body>
+	<img src="servlet/TestImageIO" id="img">
+</body>
+</html>
