@@ -43,9 +43,9 @@ public class TestImage {
 				int g = 255;
 				int b = 255;
 				if (rgbArry[i][j] == -1) {
-					r = 0;
-					g = 0;
-					b = 0;
+					r = 36;
+					g = 41;
+					b = 46;
 				}
 				int rgb =((r * 256 + g) * 256 + b);
 				bi_.setRGB(i, j, rgb);
