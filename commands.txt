@@ -1,4 +1,4 @@
-# ÖØÆônginx
+ï»¿# é‡å¯nginx
 cd /data/chainup/nginx/sbin/
 ./nginx -s reload
 
@@ -29,7 +29,7 @@ root@iZx3m5a5hu74m5Z:/data/web3j-3.4.0/bin# ./web3j solidity generate /data/Meta
 
 root@iZx3m5a5hu74m5Z:/data/web3j-3.4.0/bin# ./web3j solidity generate /data/TokenERC20.bin /data/TokenERC20.abi -o /data -p com.my.demo
 
-ÏÂÔØ£¬±àÒë£¬°²×°
+ä¸‹è½½ï¼Œç¼–è¯‘ï¼Œå®‰è£…
 git clone https://github.com/ethereum/go-ethereum.git
 cd  go-ethereum
 git checkout v1.7.2
@@ -71,7 +71,7 @@ geth --datadir "./chain" --rpc --rpcaddr localhost --rpcport "8545" --networkid 
 admin.addPeer("enode://d88abaf820530bc12352491675afc4648067b613b1e32d91ba188cbb1d46adcdaae1351fff2584b5f06994b54fe09f229a417ffb9ea39dcd98b48fd22b404e1f@47.75.104.2:30303")
 
 geth --rpc --rpcport 8545 --rpcaddr=`hostname -I` --datadir /data/private-geth/chain --networkid 3 console 2>>/data/private-geth/eth.out
-# ½Úµã
+# èŠ‚ç‚¹
 geth --rpc --rpcaddr 0.0.0.0 --rpcport 8545  --rpcapi db,eth,net,web3,personal,admin,miner --cache 1024 --syncmode "fast" --maxpeers 30 --datadir /data/geth/chain console 2>>/data/geth/eth.out
 geth --rpc --rpcaddr 0.0.0.0 --rpcport 8545  --rpcapi db,eth,net,web3,personal,admin,miner --cache 1024 --syncmode "light" --testnet --maxpeers 30 --datadir /data/geth/chain console 2>>/data/geth/eth.out
 
@@ -105,7 +105,7 @@ sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
 sudo apt-get install ethereum
 
-go»·¾³
+goçŽ¯å¢ƒ
 wget https://www.golangtc.com/static/go/1.9.2/go1.9.2.linux-amd64.tar.gz
 tar -xzf  go1.9.2.linux-amd64.tar.gz -C /usr/local/
 vim /etc/profile
