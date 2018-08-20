@@ -1,0 +1,159 @@
+# 重启nginx
+cd /data/chainup/nginx/sbin/
+./nginx -s reload
+
+netstat -tunlp|grep 
+
+
+scp btcx-web-api.war web10:/data/tomcat-hht-cny-web/webapps
+
+/usr/local/chainup/hht-exchange-vue
+
+[root@db01-h tmp]# mysql -uroot -p -S mysql4311.sock
+
+
+#########################
+
+
+
+
+solc MetaCoin.sol --bin --abi --optimize -o /data
+
+solc TokenERC20.sol --bin --abi --optimize -o /data
+
+
+
+web3j solidity generate /data/MetaCoin.bin /data/MetaCoin.abi -o /data -p com.my.demo
+
+root@iZx3m5a5hu74m5Z:/data/web3j-3.4.0/bin# ./web3j solidity generate /data/MetaCoin.bin /data/MetaCoin.abi -o /data -p com.my.demo
+
+root@iZx3m5a5hu74m5Z:/data/web3j-3.4.0/bin# ./web3j solidity generate /data/TokenERC20.bin /data/TokenERC20.abi -o /data -p com.my.demo
+
+下载，编译，安装
+git clone https://github.com/ethereum/go-ethereum.git
+cd  go-ethereum
+git checkout v1.7.2
+make geth
+make all
+vim /etc/profile
+export GETH=/data/git/go-ethereum/build
+export PATH=$GETH/bin:$PATH
+source /etc/profile
+geth version
+
+mkdir private-geth
+cd private-geth
+vim genesis.json
+{
+	"nonce":"0x0000000000000042",
+	"mixhash":"0x0000000000000000000000000000000000000000000000000000000000000000",
+	"difficulty": "0x4000",
+	"alloc": {},
+	"coinbase":"0x0000000000000000000000000000000000000000",
+	"timestamp": "0x00",
+	"parentHash":"0x0000000000000000000000000000000000000000000000000000000000000000",
+	"extraData": "0x00000000",
+	"gasLimit":"0xffffffff",
+	"config":{
+		"chainId": 666,
+		"homesteadBlock": 0,
+		"eip155Block": 0,
+		"eip158Block": 0
+	}
+}
+
+geth init ./genesis.json --datadir "./chain"
+geth --datadir "./chain" --nodiscover 					    console 2>>eth_output.log
+geth --datadir "./chain" --rpc --rpcaddr localhost --rpcport "8545" --syncmode "light" console 2>>eth_output.log
+
+geth --datadir "./chain" --rpc --rpcaddr localhost --rpcport "8545" --networkid 3 console 2>>eth_output.log
+
+admin.addPeer("enode://d88abaf820530bc12352491675afc4648067b613b1e32d91ba188cbb1d46adcdaae1351fff2584b5f06994b54fe09f229a417ffb9ea39dcd98b48fd22b404e1f@47.75.104.2:30303")
+
+geth --rpc --rpcport 8545 --rpcaddr=`hostname -I` --datadir /data/private-geth/chain --networkid 3 console 2>>/data/private-geth/eth.out
+# 节点
+geth --rpc --rpcaddr 0.0.0.0 --rpcport 8545  --rpcapi db,eth,net,web3,personal,admin,miner --cache 1024 --syncmode "fast" --maxpeers 30 --datadir /data/geth/chain console 2>>/data/geth/eth.out
+geth --rpc --rpcaddr 0.0.0.0 --rpcport 8545  --rpcapi db,eth,net,web3,personal,admin,miner --cache 1024 --syncmode "light" --testnet --maxpeers 30 --datadir /data/geth/chain console 2>>/data/geth/eth.out
+
+#geth --rpc --rpcport 8545 --rpcaddr=`hostname -I` --datadir /data/private-geth/chain --networkid 3 --bootnodes "enode://d8edf095778918321edcaa07070ee765001bf53989589aa8b4091667a9b40891e6da07b23ac218fe798237da009f94d4739697738df18bf0361761b48faef4ab@47.97.212.12:30303" console 2>>/data/private-geth/eth.out 
+admin.addPeer("enode://54b7b1dccbe37148cda6e0c9889d23ffb8e2efc905f3c2d001cd66b3b513210a4a426706bab795d83d0c236b9b1647f46947d86c48ac8faf7f802aff318c4aa1@219.216.65.139:30303")
+admin.peers
+
+netstat -tunlp|grep 
+
+tail -f /data/private-geth/eth.out
+
+
+web3.eth.accounts
+miner.start(1)
+miner.stop()
+
+eth.blackNumber
+
+web3.personal.newAccount("123456")
+"0x1ca7d95d387a02fe36a324facb5aa040bb7b2cf3"
+web3.personal.unlockAccount(acc0,"123456")
+web3.eth.getBalance("0x1ca7d95d387a02fe36a324facb5aa040bb7b2cf3")
+
+
+
+
+
+
+sudo apt-get install software-properties-common python-software-properties
+sudo add-apt-repository -y ppa:ethereum/ethereum
+sudo apt-get update
+sudo apt-get install ethereum
+
+go环境
+wget https://www.golangtc.com/static/go/1.9.2/go1.9.2.linux-amd64.tar.gz
+tar -xzf  go1.9.2.linux-amd64.tar.gz -C /usr/local/
+vim /etc/profile
+export GOPATH=/usr/local/go
+export PATH=$GOPATH/bin:$PATH
+source /etc/profile
+go version
+
+
+0x3C35a86fEcEA8173179CA3087d72cB4f34F0466a
+> eth.getTransactionReceipt("0x4480b80ec4db47c337dbf2e5e94245156970377cc1394c3c4e3683c0cbc61a23")
+{
+  blockHash: "0xd0fd8155d6cfd5f61c17206efea7e7750db357f5885c3dd453cf45de4c39d41c",
+  blockNumber: 7733,
+  contractAddress: "0x98c826df19f331f1e826daf8e7a2b928bb56b4e8",
+  cumulativeGasUsed: 1000000,
+  from: "0x6597a72535547ff86b824e00f9391edc663a25c9",
+  gasUsed: 1000000,
+  logs: [],
+  logsBloom: "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  root: "0x7a01a40b5f755725f52f776fd9ccf6d6e4b7e94195127c86a56bb0fb6d3ed280",
+  to: null,
+  transactionHash: "0x4480b80ec4db47c337dbf2e5e94245156970377cc1394c3c4e3683c0cbc61a23",
+  transactionIndex: 0
+}
+
+
+
+
+
+
+
+
+
+
+
+npm install -g ethereumjs-testrpc truffle
+testrpc
+
+truffle init
+
+truffle compile
+
+truffle migrate
+truffle deploy --reset
+
+truffle console
+let contract
+HelloWorld.deployed().then(instance => contract = instance)
+
+truffle unbox react-box
